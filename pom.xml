@@ -17,6 +17,11 @@
 
     <build>
         <plugins>
+            <!--
+              maven-compiler-plugin 3.11.0: required to honor <release>17</release>.
+              Build runs on Maven 3.8.4, so 3.13.0+ (needs Maven 3.9.0+) cannot be used,
+              and 3.0.5 / the super-POM default 3.1 are too old to target Java 17.
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
